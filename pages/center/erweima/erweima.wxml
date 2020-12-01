@@ -1,0 +1,2 @@
+<!--pages/center/erweima/erweima.wxml-->
+<image bindtap="shows"  src="{{imgUrl}}" style="height:640rpx"></image>

@@ -1,0 +1,50 @@
+<view class="draw">
+	<view class="draw_information">
+		<image class="information_img" src="{{userimage}}"></image>
+		<view class="information"><text class="information_but">推广专员：</text>{{username}} </view>
+	</view>
+	<view class="draw_earnings">
+		<view class="earnings">当前月收益：<text>{{monthMoney  || 0 }}</text>元</view>
+		<view class="balance">余额：<text>{{usermoney.balance || 0 }}</text>元</view>
+	</view>
+	<view class="darw_amounts">
+		<view class="amounts_income">
+			<image class="income_img" src="/images/income.png"></image>
+			<input class="income_inp" placeholder="累计收入(元)"></input>
+			<view class="incime_money">
+				<text class="money">{{usermoney.incomeMoney  || 0 }}</text>
+				<image class="money_img" src="/images/arrows.png"></image>
+			</view>
+		</view>
+		<view class="amounts_income">
+			<image class="income_img" src="/images/20200511194038.png"></image>
+			<input class="income_inp" placeholder="累计提现(元)"></input>
+			<view class="incime_money">
+				<text class="money">{{usermoney.wthdrawMoney || 0 }}</text>
+				<image class="money_img" src="/images/arrows.png"></image>
+			</view>
+		</view>
+		<view class="amounts_income">
+			<image class="income_img" src="/images/20200511194047.png"></image>
+			<view class="income_inp">提现记录</view>
+			<view class="incime_money">
+				<image class="money_img" src="/images/arrows.png"></image>
+			</view>
+		</view>
+		<view class="amounts_income" style="border-bottom:0;">
+			<image class="income_img" src="/images/20200511193945.png"></image>
+			<view class="income_inp">选择提现金额</view>
+		</view>
+		<view class="select">
+			<button hover-class="hover">￥50</button>
+			<button hover-class="hover">￥100</button>
+			<button hover-class="hover">￥200</button>
+		</view>
+	</view>
+	<view class="explain">
+		<view>规则说明</view>
+	</view>
+	<view class="withdraw">
+		<button class="withdraw_but">提现</button>
+	</view>
+</view>

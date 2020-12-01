@@ -1,0 +1,90 @@
+.container {
+  padding: 20rpx;
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  background-color: #FFE1D9;
+  color: #424343;
+}
+
+.close_txt {
+  padding: 20rpx;
+  font-size: 24rpx
+}
+
+.close>image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: auto;
+}
+
+.content,
+.contact {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  background-color: white;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
+
+.content_title,
+.contact_title {
+  flex: 1;
+  margin-bottom: auto;
+}
+
+.content_text,
+.contact_input {
+  flex: 3;
+}
+
+.content_text {
+  font-size: 24rpx;
+}
+
+/*  */
+.Bill {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.takeBill {
+  height: 88rpx;
+  background: #fff;
+  position: relative;
+  border-top: 1px solid #e6e6e6;
+}
+
+.box-right {
+  width: 50%;
+  height: 90rpx;
+  background: rgb(66, 172, 255);
+  position: absolute;
+  right: 0;
+  border-radius: 0;
+  color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 30rpx;
+  top: -1rpx
+}
+
+.box-left {
+  width: 50%;
+  height: 90rpx;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  border-radius: 0;
+  color: rgb(176, 176, 176);
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 30rpx;
+  top: -1rpx
+}

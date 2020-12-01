@@ -1,0 +1,582 @@
+.course-content {
+  background-color: white;
+  overflow: hidden;
+}
+
+.selected {
+  border-radius: 50rpx;
+  background-color: #3B7AEE !important;
+  box-shadow: 1rpx 5rpx 10rpx #e7e7e7;
+  color: white;
+}
+
+.sku {
+  width: 128rpx;
+  height: 64rpx;
+  border-radius: 50rpx;
+  line-height:70rpx;
+  margin: 20rpx 46rpx 20rpx 0;
+  text-align: center;
+  background-color: #f9f9f9;
+  font-size: 24rpx;
+}
+
+.sku_1 {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.item-img>image {
+  height: 574.5rpx;
+}
+
+.item-t {
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #CCCCCC;
+}
+
+.kefu_d {
+  display: flex;
+  align-items: center;
+  margin: 0rpx;
+  background-color: white;
+  margin-left: auto;
+  height: 58rpx;
+}
+
+.kefu_d::after {
+  border: 0rpx;
+  border-radius: 0rpx;
+}
+
+.kefu_d>image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.kefu_d>view {
+  margin-left: 10rpx;
+  font-size: 26rpx;
+  color: #515151;
+}
+
+/*  */
+.btn_pay {
+  background-color: #42ADFF;
+  border-radius: 40rpx;
+  line-height: 50rpx;
+  text-align: center;
+  width: 166rpx;
+  font-size: 26rpx;
+  color: white;
+  margin-left: auto;
+  box-shadow: 0rpx 5rpx 10rpx #1F6EFF;
+  background: linear-gradient(to top, #1F6EFF, #7CB3FE);
+  margin-right: 10rpx;
+}
+
+.discounts {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  position: relative;
+}
+
+.discounts>text {
+  display: block;
+  position: absolute;
+  z-index: 9;
+  font-size: 24rpx;
+  top: 23%;
+  left: 12%;
+  color: #515151;
+  width: 210rpx;
+  text-align: center;
+}
+
+.btn_img1 {
+  width: 320rpx;
+  height: 160rpx;
+  position: absolute;
+  left: 4%;
+  opacity: 0.8;
+}
+
+.btn_image {
+  width: 100%;
+  height: 90rpx;
+}
+
+/* 地图位置 */
+.coordinate {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  font-size: 24rpx;
+  padding: 30rpx 20rpx;
+}
+
+.coordinate>.label {
+  flex: 1;
+}
+
+.coordinate>picker {
+  flex: 8;
+}
+.map_text{
+  display: flex;
+  align-items: center;
+}
+.map_inp{
+  width: 100%;
+}
+.map_cho{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+map {
+  width: auto;
+  padding: 20rpx;
+}
+
+/*  */
+.desc {
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.desc>image {
+  width: 100%;
+  /* height: 732rpx; */
+  margin-bottom: 20rpx;
+}
+
+/*  */
+.Bill {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.takeBill {
+  height: 88rpx;
+  background: #fff;
+  position: relative;
+  border-top: 2rpx solid #E6E6E6;
+  overflow: hidden;
+}
+
+.icon-wrap {
+  float: left;
+}
+
+.kefu {
+  font-size: 24rpx;
+  font-weight: 400;
+  background-color: #FFF;
+  width: 190rpx;
+  color: rgb(153, 153, 153);
+  display: flex;
+  align-items: center;
+}
+
+.box-right2 {
+  background-color: #7CB3FE;
+}
+
+.takeBill .box-right {
+  width: 254rpx;
+  height: 90rpx;
+  /* background: rgb(66, 172, 255); */
+  position: absolute;
+  right: 0;
+  color: black;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-right>image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+/*  */
+.shade {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.2;
+}
+
+.apply {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  background-color: white;
+  font-size: 24rpx;
+}
+
+.apply_t {
+  margin-bottom: 30rpx;
+  padding: 20rpx;
+  position: relative;
+}
+.apply_hea{
+  display: flex;
+  border-bottom: 1rpx solid #f9f9f9;
+  padding-bottom: 20rpx;
+  position: relative;
+}
+.apply_hea>image{
+  width: 154rpx;
+  height: 154rpx;
+  border-radius: 20rpx;
+}
+.apply_hea_txt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 60rpx;
+}
+.hea_title{
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+  color: #333333;
+}
+.hea_text{
+  font-size: 26rpx;
+  color: #938f8f;
+}
+.mon {
+  font-size: 32rpx;
+  font-weight: 700;
+  position: absolute;
+  right: 5%;
+  top: 13%;
+  color: #fe2332;
+}
+
+.apply_t>picker:nth-child(2) {
+  font-size: 26rpx;
+}
+
+.apply_txt {
+  margin-left: 20rpx;
+}
+
+.apply_b {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 20rpx;
+}
+
+.apply_b>view {
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: 700;
+}
+.apply_b>view:nth-child(1){
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  background-color: #f9f9f9;
+  color: #938f8f;
+}
+.apply_b>view:nth-child(2) {
+  background-color: #3c7bef;
+  color: white;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+}
+
+/*  */
+.discounts_bog {
+  background-color: black;
+  opacity: 0.5;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  top: 0;
+  left: 0;
+}
+
+.discounts_choose {
+  width: 100%;
+  height: 100%;
+  font-size: 26rpx;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose {
+  width: 80%;
+  background-color: white;
+
+}
+
+.choice_t {
+  padding: 20rpx;
+  margin: 20rpx 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.choice_t>picker {
+  width: 100%;
+}
+
+.choice_t>image {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.choice_t .picker {
+  line-height: 50rpx;
+  height: 50rpx;
+}
+
+.choice_b {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 1rpx solid #ccc;
+}
+
+.choice_b>view {
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.choice_b>view:nth-child(2) {
+  border-left: 1rpx solid #ccc;
+}
+
+/* 简介 */
+
+.intro {
+  padding: 20rpx 60rpx;
+  font-size: 26rpx;
+  background-color: white;
+  line-height: 1.2rem;
+}
+
+/* 课程详情 */
+.particulars_bagimg{
+  background-image: url("https://beichuangera.oss-cn-beijing.aliyuncs.com/imges/particulars_bagimg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 60rpx 40rpx 30rpx 40rpx;
+}
+.parti_title_1{
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
+  color: #4866fc;
+  margin-bottom: 11rpx;
+  letter-spacing: 10rpx;
+}
+.parti_title_2{
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  color: #4866fc;
+  margin-bottom: 70rpx;
+  letter-spacing: 13rpx;
+}
+
+.parti_txt{
+  border: #002aff 4rpx solid;
+  border-radius: 20rpx; 
+  padding-top: 60rpx;
+  box-shadow: 0.5rpx 10rpx 20rpx rgb(177, 177, 177);
+}
+.parti_bor{
+  margin-bottom: 10rpx;
+  border-bottom: #002aff 6rpx solid;
+  border-bottom-left-radius: 20rpx;
+}
+.parti_title_3{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.parti_title_3>view:nth-of-type(1){
+  background-color: #002aff;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+}
+.parti_title_3>view:nth-of-type(2){
+  color: #4866fc;
+  font-size: 30rpx;
+  margin-left: 22rpx;
+  font-weight: 400;
+}
+.parti_title_4{
+  padding: 18rpx  0  10rpx 35rpx;
+  margin-left: 7rpx;
+  border-left: 6rpx solid #002aff;
+  font-size: 22rpx;
+  font-weight: 300;
+  line-height: 32rpx;
+}
+
+/* 活动 */
+.activity{
+  background-color: white;
+}
+.acti_top{
+  padding-top: 60rpx;
+}
+.acti_ation{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.acti_bo{
+  width: 100%;
+  border-left: 1rpx solid #EEEEEE;
+  padding: 0 40rpx;
+  text-align: center;
+}
+.acti_bo:first-of-type{
+  border: none;
+}
+.acti_1{
+  font-size: 36rpx;
+  color: #575757;
+  font-weight: 700;
+  letter-spacing: 5rpx;
+}
+.acti_2{
+  font-size: 22rpx;
+  color: #c6c6c6;
+  margin-top: 20rpx;
+}
+
+.acti_butt{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 60rpx;
+}
+.butt_1{
+  width: 30%;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #5fa4f4;
+  color: white;
+}
+.butt_2{
+  width: 60%;
+  font-size: 26rpx;
+  color: white;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #f34e4e;
+}
+
+.acti_bot{
+  margin-top: 60rpx;
+  overflow: hidden;
+}
+
+
+.tabNav {
+  z-index: 4;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  display: flex;
+  border-bottom: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tabNav> view {
+  width: 50%;
+  text-align: center;
+}
+
+.tabNav> view:last-child{
+  border-left: 1rpx solid #EEEEEE;
+  box-sizing: border-box;
+}
+
+.tabNav> view text {
+  height: 75rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+}
+
+.tabNav .cur {
+  color: red;
+}
+.tabshow{
+   visibility: visible;
+   display: block;
+}
+.tabhide{
+   visibility: hidden;
+   display: none;
+}
+.tab_{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 30rpx 20rpx;
+}
+.tab_img{
+  width: 60rpx;
+  height: 60rpx;
+  background-color: lavender;
+  border-radius: 50%;
+}
+
+.tab_txt_1{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+.tab_txt_2{
+  margin-left: auto;
+  font-size: 24rpx;
+}
+ .butt{
+   position: absolute;
+   right: 16rpx;
+   z-index: 99;
+ }

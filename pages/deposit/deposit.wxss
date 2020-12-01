@@ -1,0 +1,137 @@
+.draw {
+  width: 100%;
+  font-size: 24rpx;
+}
+
+.draw_information {
+  padding: 60rpx;
+  text-align: center;
+  background-color: white;
+  align-items: center;
+}
+
+.information_img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.information {
+  margin: auto;
+  background-color: #42ACFF;
+  border-radius: 50rpx;
+  width: 50%;
+  margin-top: 25rpx;
+  font-size: 25rpx;
+  line-height: 1.3rem;
+}
+
+.information_but {
+  padding: 3rpx;
+  color: white;
+  width: 50%;
+}
+
+/*  */
+.draw_earnings {
+  display: flex;
+  justify-content: space-between;
+  padding: 12rpx 65rpx 12rpx 65rpx;
+}
+
+.earnings>text,
+.balance>text {
+  color: red;
+  font-size: 26rpx;
+}
+
+/*  */
+.darw_amounts {
+  padding: 20rpx 40rpx;
+  background-color: white;
+}
+
+.amounts_income {
+  padding: 20rpx 0;
+  margin: 0 20rpx 40rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.income_img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+}
+
+.income_inp {
+  margin-left: 40rpx;
+}
+
+.incime_money {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.money {
+  color: red;
+}
+
+.money_img {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.select {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.select button {
+  font-size: 28rpx;
+  color: #42ACFF;
+  background-color: white;
+}
+
+button::after {
+  border: 1rpx solid #42ACFF;
+  border-radius: 20rpx;
+}
+
+.hover {
+  color: white !important;
+  background-color: #42ACFF !important;
+}
+
+/*  */
+.explain {
+  line-height: 1.6rem;
+  padding: 40rpx;
+  background-color: white;
+}
+
+/*  */
+.withdraw {
+  background-color: white;
+  padding-bottom: 40rpx;
+}
+
+.withdraw_but {
+  padding: 3rpx;
+  margin: 0 40rpx;
+  height: 80rpx;
+  line-height: 2.3rem;
+  text-align: center;
+  background-color: rgb(13, 102, 167);
+  border-radius: 15rpx;
+  font-size: 30rpx;
+}
+
+.withdraw_but::after {
+  border: 0rpx;
+  border-radius: 0rpx;
+}

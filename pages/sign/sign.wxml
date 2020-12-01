@@ -1,0 +1,25 @@
+<!-- 搜索框 -->
+<view class="seek">
+	<view class="search">
+		<input class="search_input" placeholder="{{value}}"></input>
+		<image class="location" src="/images/search.png"></image>
+	</view>
+</view>
+
+<!-- 课程 -->
+<view class="sec" wx:for="{{type}}" wx:for-item="type" wx:key="type">
+	<view class="sec-headers">
+		<view style="font-size:28rpx;">{{type.name}}</view>
+		<text class="sec_bor"></text>
+	</view>
+	<view class="sec-title" wx:if="{{type.good != ''}}">
+		<navigator hover-class="noshadow" url="/pages/course/course?GoodID={{good.id}}" wx:for="{{type.good}}" wx:for-item="good" wx:key="good">
+			<view class="typetitle">
+				<view>{{good.goodName}}</view>
+			</view>
+		</navigator>
+	</view>
+	<view class="sec-title" style="text-align:center;" wx:if="{{type.good == ''}}">
+		<text class="sec_title_txt">暂时没有更多课程  </text>
+	</view>
+</view>

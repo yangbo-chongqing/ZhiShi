@@ -1,0 +1,18 @@
+ <view class="app">
+ 	<!-- 背景图片 -->
+ 	<image src=""></image>
+ 	<!-- 报名 -->
+ 	<view class="apply_b">
+ 		<view>
+ 			<navigator url="/pages/game/Play/play?id+={{id}}">报名</navigator>
+ 		</view>
+ 		<view>
+ 			<view>
+ 				<navigator url="">去训练</navigator>
+ 			</view>
+ 			<view>
+ 				<navigator url="">去比赛</navigator>
+ 			</view>
+ 		</view>
+ 	</view>
+ </view>

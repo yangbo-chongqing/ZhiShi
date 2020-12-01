@@ -1,0 +1,24 @@
+<view class="container">
+	<view class="close" wx:if="{{show}}">
+		<view class="close_txt">为了更快的解决您的问题，请提交你的问题和意见</view>
+		<image bindtap="mm" src="/images/close.png"></image>
+	</view>
+	<view class="panel">
+		<form bindsubmit="addFeedback">
+			<view class="content">
+				<textarea class="content_text" type="textarea" name="content" maxlength="200" placeholder="请输入反馈的内容" value="{{Massages}}" bindinput="Massages" />
+				</view>
+      <view class="contact">
+        <text class="contact_title">联系方式</text>
+        <input class="contact_input" type="number" name = "contact" maxlength="11" placeholder="请输入联系方式" value = "{{Phone}}" bindinput="Phone"/>
+      </view>
+    </form>
+  </view>
+  <!--底部栏-->
+  <view class="Bill" >
+    <view class="takeBill">
+        <view bindtap="placeOrders" class="box-left">取消</view>
+        <view bindtap="addFeedBack" class="box-right">确定</view>
+    </view>
+  </view>
+</view>

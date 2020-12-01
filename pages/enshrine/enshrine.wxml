@@ -1,0 +1,17 @@
+<view wx:for="{{userCollect}}" wx:key="item">
+	<view hover-class="noshadow">
+		<view class="collect">
+			<image class="collect_img" src="{{item.HomePic}}"></image>
+			<view class="collect_txt">
+				<view>{{item.Name}}</view>
+				<view>简介：{{item.GoodName}}</view>
+			</view>
+			<view class="collect_cancel" bindtap="unCollect" data-id="{{item.GoodID}}">取消收藏</view>
+		</view>
+	</view>
+</view>
+
+<view wx:if="{{userCollect.length == 0 || userCollect==null}}" class="hint">
+	<image class="hint_img" src="/images/tim_img.png"></image>
+	<text class="hint_txt">哎呀，没有内容</text>
+</view>

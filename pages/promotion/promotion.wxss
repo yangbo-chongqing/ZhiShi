@@ -1,0 +1,107 @@
+.information {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+
+}
+
+.phone {
+  width: 74%;
+  font-size: 24rpx;
+  padding: 10rpx 40rpx;
+  border: 1rpx solid #FAE25F;
+  border-radius: 10rpx;
+  background-color: white;
+}
+
+.code {
+  width: 88%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40rpx 0;
+  position: relative;
+}
+
+.code_inp {
+  width: 100%;
+  font-size: 24rpx;
+  padding: 10rpx 40rpx;
+  border: 1rpx solid #FAE25F;
+  border-radius: 10rpx;
+  background-color: white;
+}
+
+.code_txt {
+  width: 25%;
+  text-align: center;
+  font-size: 24rpx;
+  padding: 5rpx 20rpx;
+  background-color: #33C6BA;
+  border: 1rpx solid #33C6BA;
+  color: white;
+  display: block;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+
+.submit {
+  width: 100%;
+  font-size: 26rpx;
+  color: #EA6830;
+  background-color: #FAE25F;
+}
+
+
+/* login */
+.dialog-login {
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.dialog-login .dialog-body {
+  width: 550rpx;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+  padding: 40rpx;
+}
+
+.header {
+  margin: 50rpx 0 50rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 85%;
+  height: 180rpx;
+  line-height: 50rpx;
+}
+
+.header image {
+  width: 35%;
+  height: 35%;
+}
+
+.content {
+  margin-left: 50rpx;
+  margin-bottom: 85rpx;
+}
+
+.button {
+  border-radius: 50rpx;
+  margin: 70rpx 55rpx;
+  font-size: 35.3rpx;
+}

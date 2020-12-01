@@ -1,0 +1,59 @@
+	<!-- 添加宝贝信息 -->
+	<view class="addchild" wx:if="{{showAdd==true}}">
+		<view class="head"> 
+			<text>宝贝信息</text>
+		</view>
+		<view class="fill">
+			<text>姓名</text>
+			<input placeholder-class="ipt" placeholder="真实姓名" value="{{childName}}" bindinput="childName" />
+		</view>
+		<view class="fill">
+			<text>年龄</text>
+			<input placeholder-class="ipt" placeholder="年龄" value="{{childIP}}" bindinput="childIP" />
+		</view>
+		<view class="fill">
+			<text>电话</text>
+			<input placeholder-class="ipt" placeholder="联系电话" value="{{childSchool}}" bindinput="childSchool" />
+		</view> 
+		<view class="fill bu">
+			<button size="100%" bindtap="addChild">完成</button>
+		</view>
+	</view>
+	<!-- 宝贝信息 -->
+	<view class="center">
+		<view class="center_item title">
+			<view class="title_1">宝贝信息</view>
+			<view class="title_2" bindtap="addChild">添加</view>
+		</view>
+		<view class="center_item center_item_1">
+			<view class="essential">
+				<view>姓名：</view>
+				<view>{{child[childindex].name}}</view>
+			</view>
+			<view class="essential">
+				<view>年龄：</view>
+				<view>{{phone}}</view>
+			</view>
+			<view class="essential">
+				<view>联系方式：</view>
+				<view>{{phone}}</view>
+			</view>
+		</view>
+
+		<!-- 战队信息 -->
+		<view class="center_item" style="position:relative;">
+			<view class="section">
+				<view class="section__title">选择战队：</view>
+				<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+					<view class="picker">
+						请选择：{{multiArray[0][multiIndex[0]]}}{{multiArray[1][multiIndex[1]]}}
+					</view>
+				</picker>
+			</view>
+		</view>
+	</view>
+
+	<view class="bottom">
+		<view>合计：<text style="color:red">￥{{money}}</text></view>
+		<view bindtap="signUp">确认报名</view>
+	</view>

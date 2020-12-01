@@ -1,0 +1,160 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+}
+
+.title {
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1rpx solid rgb(219, 219, 219);
+  padding-top: 10rpx;
+  font-size: 26rpx;
+  text-align: center;
+  position: fixed;
+  top: 0rpx;
+  z-index: 2;
+}
+
+.title>text {
+  width: 26%;
+  display: block;
+}
+
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #ccc;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.swiper-tab-item {
+  width: 30%;
+  color: #434343;
+}
+
+.active {
+  color: #F65959;
+  border-bottom: 4rpx solid #F65959;
+}
+
+swiper {
+  text-align: center;
+  height: 100vh;
+  margin-top: 65rpx;
+}
+
+scroll-view {
+  overflow: hidden;
+}
+
+.bag {
+  background-color: white;
+  padding: 40rpx 0 20rpx 0;
+}
+
+.header {
+  width: 90%;
+  height: 222rpx;
+  background-size: 100%;
+  background-image: url("http://www.taoxueqinzi.com/travelFiles/data/1202/0283e163e6054d04b2f51c7daccded05.png");
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+.hh_content {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.hh_left {
+  flex: 2;
+  text-align: center;
+}
+
+.hh_left_content {
+  margin: 0 20rpx;
+  padding: 10rpx;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.hh_left_content>view:nth-child(1) {
+  font-size: 26rpx;
+}
+
+.hh_left_content>view:nth-child(2) {
+  font-size: 24rpx;
+  line-height: 1.2rem;
+  margin-top: 14rpx;
+}
+
+.hh_right {
+  flex: 1;
+  text-align: center;
+}
+
+.hh_right_content {
+  margin: 10px;
+  line-height: 20px;
+  font-size: 26rpx;
+  color: #fff;
+}
+
+.hh_addnews {
+  background-color: rgb(194, 163, 70);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* .explain {
+  position: absolute;
+  bottom: 0;
+}
+
+.explain_bag {
+  background-color: white;
+  padding: 20rpx;
+}
+
+.explain_bag>view:nth-child(1) {
+  width: 300rpx;
+  padding: 10rpx 0;
+  background-color: #367DFB;
+  font-size: 26rpx;
+  color: white;
+  border-radius: 50rpx;
+  text-align: center;
+  margin: auto;
+}
+
+.explain_bag>view:nth-child(2) {
+  font-size: 24rpx;
+  padding: 10rpx 40rpx;
+  line-height: 1.6rem;
+} */
+
+.no {
+  z-index: 99;
+  text-align: center;
+}
+
+.no_img {
+  width: 400rpx;
+  height: 300rpx;
+}
+
+.no_txt {
+  font-size: 26rpx;
+}

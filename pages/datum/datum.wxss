@@ -1,0 +1,43 @@
+/* pages/datum/datum.wxss */
+.fraame {
+  background-color: white;
+}
+
+.fill {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #E5E5E5;
+  margin-left: 20rpx;
+}
+
+.fill>text {
+  flex: 1;
+  font-size: 26rpx;
+}
+
+.fill>input {
+  flex: 3;
+  font-size: 26rpx;
+}
+
+.radio-group {
+  flex: 3;
+  margin-left: -20rpx;
+  font-size: 40rpx;
+}
+
+.radio-group >radio:nth-child(1) {
+  transform:scale(0.7);
+}
+.radio-group >radio:nth-child(2) {
+  transform:scale(0.7);
+  margin-left: 10rpx;
+}
+.fill>button {
+  width: 100%;
+  background-color: #41ACFF;
+  margin-right: 20rpx;
+  color: white;
+  font-size: 30rpx;
+}

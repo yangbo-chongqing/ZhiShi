@@ -1,0 +1,45 @@
+<view class="fraame">
+	<view class="close" wx:if="{{show}}">
+		<view class="close_txt">请提交你的真实信息!!!</view>
+		<image bindtap="mm" src="/images/close.png"></image>
+	</view>
+	<view class="fill">
+		<text>真实姓名</text>
+		<input placeholder-class="ipt" placeholder="真实姓名" value="{{childName}}" bindinput="childName" />
+	</view>
+	<view class="fill">
+		<text>身份信息</text>
+		<input placeholder-class="ipt" placeholder="身份证" value="{{childIP}}" bindinput="childIP" />
+	</view>
+	<view class="fill">
+		<text decode="{{true}}">性&ensp;&ensp;&ensp;&ensp;别</text>
+		<radio-group class="radio-group" bindchange="radioChange">
+			<radio value="男">男</radio>
+			<radio value="女">女</radio>
+		</radio-group>
+	</view>
+	<view class="fill">
+		<text>孩子学校</text>
+		<input placeholder-class="ipt" placeholder="孩子学校" value="{{childSchool}}" bindinput="childSchool" />
+	</view>
+  	<view class="fill">
+		<text>带队老师</text>
+		<input placeholder-class="ipt" placeholder="带队老师" value="{{teacher}}" bindinput="teacher" />
+	</view>
+	<view class="fill">
+		<text>学习阶段</text>
+		<view class="tihuoWay">
+			<view class="section select_one">
+				<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+					<view class="picker">
+						{{tihuoWay}}
+					</view>
+				</picker>
+			</view>
+			<image class="fill_arrows" src="/images/arrows.png"></image>
+		</view>
+	</view>
+	<view class="fill bu">
+		<button size="100%" bindtap="addChild">申请</button>
+	</view>
+</view>

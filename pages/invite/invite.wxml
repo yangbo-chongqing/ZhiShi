@@ -1,0 +1,5 @@
+<view class="invite">
+	<navigator>
+		<image class="invite_banner" src="/images/invite.png" mode="widthFix"></image>
+	</navigator>
+</view>

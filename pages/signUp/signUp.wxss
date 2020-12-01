@@ -1,0 +1,205 @@
+/* pages/signUp/signUp.wxss */
+page {
+  font-size: 29rpx;
+}
+
+.head {
+  height: 170rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  margin: 20rpx 20rpx 0;
+  border-radius: 20rpx;
+}
+
+.head image {
+  width: 134rpx;
+  height: 134rpx;
+  border-radius: 20rpx;
+  margin-left: 30rpx;
+}
+
+.head_1 {
+  height: auto;
+  margin-left: 58rpx;
+}
+
+.head_1 view:nth-child(1) {
+  font-size: 32rpx;
+  color: #3d3d3d;
+}
+
+.head_1 view:last-of-type {
+  width: 300rpx;
+  /*要显示文字的宽度*/
+  text-overflow: ellipsis;
+  /*让截断的文字显示为点点。还有一个值是clip意截断不显示点点*/
+  white-space: nowrap;
+  /*让文字不换行*/
+  overflow: hidden;
+  /*超出要隐藏*/
+  color: #424242;
+}
+
+.head_1 view {
+  height: 60rpx;
+  line-height: 60rpx;
+  letter-spacing: 2rpx;
+}
+
+.head_2 {
+  color: #dc0c0c;
+  position: absolute;
+  right: 30rpx;
+  top: 37rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  letter-spacing: 5rpx;
+}
+
+.center {
+  height: auto;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin: 20rpx;
+}
+
+.center_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 6rpx;
+  padding: 30rpx 24rpx;
+}
+.center_item_1{
+  flex-direction: column;
+  align-items: initial;
+  padding-bottom: 0rpx;
+}
+.title_1 {
+  font-size: 30rpx;
+  font-weight: 600;
+  letter-spacing: 5rpx;
+}
+.title_2{
+  display: flex;
+  align-items: center;
+}
+.title_txt {
+  font-size: 24rpx;
+  color: #3085f8;
+}
+.title_mark{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+}
+.essential{
+  font-size: #424242;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30rpx;
+  letter-spacing: 2rpx;
+}
+.bottom {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  background-color: white;
+  bottom: 0rpx;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-top: 1rpx solid #f4f4f4;
+  font-size: 30rpx;
+}
+.bottom view:nth-of-type(1){
+  font-weight: 600;
+  line-height: 100rpx;
+  margin-left: 40rpx;
+}
+
+.bottom view:last-of-type {
+  width: 200rpx;
+  line-height: 100rpx;
+  background-color: #2394f3;
+  color: white;
+}
+
+.coupon {
+  width: 100%;
+  height: 900rpx;
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
+  padding-top: 50rpx;
+  padding-bottom: 100rpx;
+  overflow: scroll;
+}
+
+.cou {
+  width: 100%;
+  height: 190rpx;
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.cou image {
+  width: 70rpx;
+  height: 70rpx;
+  color: red;
+}
+
+.cou_1 {
+  background: url("http://www.taoxueqinzi.com/travelFiles/data/1202/0283e163e6054d04b2f51c7daccded05.png");
+  background-size: 100% 100%;
+  width: 85%;
+  height: 100%;
+  justify-content: space-around;
+  color: white;
+  display: flex;
+}
+
+.cou_2 {
+  width: 70%;
+  height: 100%;
+}
+
+.cou_3 {
+  width: 30%;
+  height: 100%;
+}
+
+.cou_2 view {
+  width: 100%;
+}
+
+.cou_2 view:first-of-type {
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+}
+
+.cou_2 view:last-of-type {
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+}
+
+.cou_3 view:first-of-type {
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 5rpx;
+  background-color: rgb(194, 163, 70);
+  margin-top: 40rpx;
+  width: 130rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}

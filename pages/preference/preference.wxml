@@ -1,0 +1,44 @@
+<view>
+	<view class="course-content">
+		<view class="item-img">
+			<image src="/images/banner1@2x.png"></image>
+		</view>
+		<view class="item-t">
+			<view class="t-d">全类课程终身免费上</view>
+			<view class="t-f">价值30000元，联合300+品牌教育机构，覆盖600+门店</view>
+			<view class="t-box">
+				<view class="t-wrap">
+					<text class="t-big">¥ 300</text>
+					<text class="t-samll">¥3000</text>
+				</view>
+				<!-- <view class="btn_pay">立即抢购</view> -->
+			</view>
+		</view>
+	</view>
+	<!-- 课程详情 -->
+	<view class="zan-panel">
+		<view class="zan-cell">
+			<text>课程详情</text>
+			<view class="smallsize"></view>
+		</view>
+	</view>
+	<!--  -->
+	<view class="desc">
+		<image src="/images/banner1@2x.png"></image>
+		<view>
+
+		</view>
+	</view>
+	<!--  -->
+	<view class="Bill">
+		<view class="takeBill">
+			<view class="icon-wrap">
+				<button class='kefu_d' open-type="contact">
+					<image src="/images/pingl.png"></image>
+					<view>咨询</view>
+				</button>
+			</view>
+			<view class="box-right" bindtap="placeOrder" data-name="order">立即购买</view>
+		</view>
+	</view>
+</view>

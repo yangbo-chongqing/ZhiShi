@@ -1,0 +1,127 @@
+page {
+  background-color: #0D90FF;
+}
+
+.invi_title {
+  margin: 0 20rpx;
+  padding-bottom: 50rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title_bor {
+  padding: 10rpx 40rpx;
+  border-radius: 50rpx;
+  background-color: white;
+  position: absolute;
+  top: -31rpx;
+}
+
+.title_bor1 {
+  padding: 10rpx 60rpx;
+  font-size: 26rpx;
+  color: white;
+  border-radius: 50rpx;
+  background-color: #0D90FF;
+}
+
+.discount {
+  background-image: url("https://beichuangera.oss-cn-beijing.aliyuncs.com/imges/0fa575f3ee7f6ee33cb436becad9dc1f.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 280rpx;
+  height: 340rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.discount_txt {
+  width: 100%;
+  text-align: center;
+  margin-top: -30%;
+  color: white;
+  font-size: 28rpx;
+}
+
+.discount_txt>text {
+  font-size: 50rpx;
+  margin: 0 10rpx;
+}
+
+.continue {
+  width: 50%;
+  color: white;
+  font-size: 36rpx;
+  text-align: center;  
+  border-radius: 50rpx;
+  margin-top: 40rpx;
+  background-color: #0D90FF;
+}
+
+.continue::after{
+
+}
+/*  */
+.invi_title_2 {
+  padding: 20rpx;
+  margin: 40rpx 20rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title_2 {
+  font-size: 26rpx;
+  color: white;
+  padding: 10rpx 60rpx;
+  border-radius: 50rpx;
+  background-color: #0D90FF;
+}
+
+.invi_text {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10rpx 0;
+}
+
+.text_img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.txt {
+  margin-left: 20rpx;
+  width: auto;
+}
+
+.txt>view:nth-of-type(1) {
+  font-size: 26rpx;
+}
+
+.txt>view:nth-of-type(2) {
+  font-size: 24rpx;
+}
+
+.sum {
+  font-size: 28rpx;
+  text-align: right;
+  margin-left: auto;
+}
+/*  */
+.invite{
+  width: 100%;
+  margin: 0 20rpx;
+  text-align: center;
+}

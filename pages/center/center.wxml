@@ -1,0 +1,95 @@
+<!--pages/center/center.wxml-->
+<view class=" message">
+	<view class="message_datum">
+		<view class="datum">
+			<button hidden="{{ userInfo.userID != ''}}" class="button" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+			<navigator url="../datum/datum" class="cells" hover-class="noshadow">
+				<view class="cells_bag">
+				<image class='cells_imgs' src="{{userInfo.avatar}}"></image>
+				</view>
+				<view class="cells_txt">
+					<view>{{ userInfo.nickName || '点击登录' }}</view>
+					<!-- <view>我有一个小秘密，点我可以修改资料</view> -->
+				</view>
+				<!-- <image class="cells_ico" src="/images/arrows.png"></image> -->
+			</navigator>
+		</view>
+	</view>
+
+	<view class="desc">
+		<view class='desc_view'>
+			<navigator url='/pages/dotey/dotey' hover-class="noshadow">
+				<image src="/images/baobeixinxi@2x.png" />
+				<text>宝贝信息</text>
+			</navigator>
+			<navigator url='/pages/order/order' hover-class="noshadow">
+				<image src="/images/lishidingdan@2x.png" />
+				<text>历史订单</text>
+			</navigator>
+			<navigator url='/pages/curriculum/curriculum' hover-class="noshadow">
+				<image src="/images/wodekecheng@2x.png" />
+				<text>我的课程</text>
+			</navigator>
+			<navigator url='/pages/enshrine/enshrine' hover-class="noshadow">
+				<image src="/images/yixuankecheng@2x.png" />
+				<text>收藏课程</text>
+			</navigator>
+		</view>
+	</view>
+
+	<view class="container">
+		<view class="zan-panel">
+			<navigator url="/pages/deft/deft" hover-class="noshadow">
+				<view class="zan-cells">
+					<image class='zan-imgs' src="/images/youhuiquan@2x.png"></image>
+					<view class="zan-cell__bd">我的优惠券</view>
+					<view class="zan-cell__ft"></view>
+				</view>
+			</navigator>
+			<view bindtap="isPromote" hover-class="noshadow">
+				<view class="zan-cells">
+					<image class='zan-imgs' src="/images/tuiguang@2x.png"></image>
+					<view class="zan-cell__bd">我要推广</view>
+					<view class="zan-cell__ft"></view>
+				</view>
+			</view>
+			<navigator url="/pages/feedback/feedback" hover-class="noshadow">
+				<view class="zan-cells">
+					<image class='zan-imgs' src="/images/fankui@2x.png"></image>
+					<view class="zan-cell__bd">用户反馈</view>
+					<view class="zan-cell__ft"></view>
+				</view>
+			</navigator>
+			<!-- <navigator>
+				<view class="zan-cells">
+					<image class='zan-imgs' src="/images/kefu@2x.png"></image>
+					<view class="zan-cell__bd">在线客服</view>
+					<view class="zan-cell__ft"></view>
+				</view>
+			</navigator> -->
+			<navigator url="/pages/company/company" hover-class="noshadow">
+				<view class="zan-cells">
+					<image class='zan-imgs' src="/images/guanyuwomen@2x.png"></image>
+					<view class="zan-cell__bd">关于我们</view>
+					<view class="zan-cell__ft"></view>
+				</view>
+			</navigator>
+		</view>
+		<navigator url="/pages/invitation/invitation">
+		<image src="/images/xiaobanner.png" mode="widthFix" style="width:100%"></image>
+		</navigator>
+	</view>
+</view>
+<!-- 登录引导操作  -->
+<view class='dialog-login' wx:if="{{showLoginDialog}}" bindtap='onCloseLoginDialog'>
+	<view class='dialog-body'>
+		<view class='header'>
+			<image mode="widthFix" src='/images/wx_login.png'></image>
+		</view>
+		<view class='content'>
+			<view>申请获取以下权限</view>
+			<text>获得你的公开信息(昵称，头像等)</text>
+		</view>
+		<button class="login-button" type="primary" lang="zh_CN" open-type="getUserInfo" bindgetuserinfo="onWechatLogin">授权登录</button>
+	</view>
+</view>

@@ -1,0 +1,41 @@
+<!--pages/invitation/invitation.wxml-->
+<view>
+	<image src="{{coupon[0].image}}" mode="widthFix" style="width:100%;"></image>
+	<view class="invi_title">
+		<view class="title_bor">
+			<view class="title_bor1">我的邀请</view>
+		</view>
+		<view style="text-align: center;" wx:if="{{user.length>0}}">
+			<view style="margin-top:50rpx;font-size:28rpx;">已领取<text style="font-size:36rpx;margin:10rpx;font-weight:600;">{{user.length}}</text>张优惠券</view>
+			<view style="display: flex;flex-direction: row;">
+				<block wx:for="{{coupon}}" wx:key="index">
+					<view class="discount">
+						<view class="discount_txt"><text>{{item.preferentialprice}}</text>元</view>
+					</view>
+				</block>
+			</view>
+			<view style="font-size:28rpx;margin-top:40rpx;">继续邀请{{user.length}}人即可享受300元优惠</view>
+		</view>
+		<!--  -->
+		<view class="invite" wx:if="{{user.length<=0}}">
+			<view style="color:#0E91FF;font-weight:700;font-siez:36rpx;margin-top:50rpx">邀请方式</view>
+			<image src="/images/a54834ad78fe1e7fd1136df1bce23dd.png" mode="widthFix"></image>
+			<view  style="font-size:28rpx">邀请20人即可享受<text style="font-size:50rpx;font-weight:700;margin:0 10rpx;">300</text>元优惠</view>
+		</view>
+		<button open-type="share" class="continue">{{user.length <=0? "立即邀请":"继续邀请"}}</button>
+	</view>
+	<view class="invi_title_2">
+		<view class="title_2">邀请记录</view>
+		<block wx:for="{{user}}" wx:key="index" wx:if="{{user.length>0}}">
+			<view class="invi_text">
+				<image class="text_img" src="{{item.Avatar}}"></image>
+				<view class="txt">
+					<view>{{item.NickName}}</view>
+					<!-- <view>{{}}2020.5.5</view> -->
+				</view>
+				<view class="sum">+{{item.Money == null?0:item.Money}}元</view>
+			</view>
+		</block>
+		<view style="font-size:24rpx;margin:20rpx;" wx:if="{{user.length<=0}}">暂没有记录</view>
+	</view>
+</view>

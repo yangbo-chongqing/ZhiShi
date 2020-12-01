@@ -1,0 +1,24 @@
+<view class="content">
+	<image></image>
+	<view class="information">
+		<input placeholder="请输入电话号码"  bindinput="getPhone" maxlength="11" class="phone"></input>
+		<view class="code">
+      <input placeholder="请输入验证码" bindinput="getcode"  maxlength="6" class="code_inp"/> 
+			<text class="code_txt" bindtap="countdown" >  {{second || '获取验证码' }}</text>
+		</view>
+		<button bindtap="addPhone" class="submit">提交</button>
+	</view>
+</view>
+<!-- 登录引导操作  -->
+<view class='dialog-login' wx:if="{{showLoginDialog}}" bindtap='onCloseLoginDialog'>
+	<view class='dialog-body'>
+		<view class='header'>
+			<image mode="widthFix" src='/images/wx_login.png'></image>
+		</view>
+		<view class='content'>
+			<view>申请获取以下权限</view>
+			<text>获得你的公开信息(昵称，头像等)</text>
+		</view>
+		<button class="button" type="primary" lang="zh_CN" open-type="getUserInfo" bindgetuserinfo="onWechatLogin">授权登录</button>
+	</view>
+</view>

@@ -1,0 +1,78 @@
+<!-- 
+	<view class="tier">
+	<view class="curriculum">
+		<image class="curriculum_img" src=""></image>
+		<view class="curriculum_txt">
+      <view>测试标题</view>
+      <view>内容：测试内容</view>
+      <view>开课时间：2020-05-01</view>
+    </view>
+	</view>
+</view> -->
+<view wx:for="{{childCourseList}}" wx:key="index" style="position:relative;">
+	<view class="name" wx:for="{{item.kidsCourse}}" wx:for-item="itmes">{{itmes.Name}}</view>
+	<view class='title'>
+		<text>周一</text>
+		<text>周二</text>
+		<text>周三</text>
+		<text>周四</text>
+		<text>周五</text>
+		<text>周六</text>
+		<text>周日</text>
+	</view>
+	<view class="cnm">
+		<view class='time' data-a="{{item.kidsCourse}}">
+			<view>上</view>
+			<view>午</view>
+			<view>下</view>
+		</view>
+		<view wx:key="index" class='list'>
+			<view  class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 1 && itmes.Time == '上午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 2  && itmes.Time == '上午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 3 && itmes.Time == '上午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 4 && itmes.Time == '上午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 5 && itmes.Time == '上午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 6 && itmes.Time == '上午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 0 && itmes.Time == '上午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 1 && itmes.Time == '下午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 2 && itmes.Time == '下午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 3 && itmes.Time == '下午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 4 && itmes.Time == '下午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 5 && itmes.Time == '下午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 6 && itmes.Time == '下午'}}">{{itmes.GoodName}}</view>
+			</view>
+			<view class='list_row'>
+				<view wx:for="{{item.kidsCourse}}" wx:for-item="itmes" wx:if="{{itmes.week == 0 && itmes.Time == '下午'}}">{{itmes.GoodName}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view wx:if="{{childCourseList.length == 0 ||childCourseList ==null}}" class="hint">
+	<image class="hint_img" src="/images/tim_img.png"></image>
+	<text class="hint_txt">哎呀，没有内容</text>
+</view>

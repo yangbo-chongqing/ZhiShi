@@ -1,0 +1,312 @@
+/* 搜索 */
+.search {
+  padding: 20rpx 30rpx;
+  background-color: #42ADFF;
+  overflow: hidden;
+}
+
+.seek {
+  float: right;
+  position: relative;
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.search_image {
+  width: 36rpx;
+  height: 36rpx;
+  position: absolute;
+  left: 20rpx;
+}
+
+.search_input {
+  width: 100%;
+  min-height: 1.4rpx;
+  font-size: 24rpx;
+  padding: 5rpx 0 5rpx 60rpx;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.location {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location_image {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.location_place {
+  width: 205rpx;
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 10rpx;
+}
+
+/* 导航栏 */
+
+.desc {
+  padding: 20rpx 0;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+}
+
+.desc_view {
+  width: 25%;
+  float: left;
+  margin: 15rpx 0 15rpx 0;
+  text-align: center;
+  color: #515151;
+  font-size: 24rpx;
+}
+
+.desc_view image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 15rpx;
+}
+
+/*  */
+.course-list {
+  padding: 0 24rpx;
+
+}
+
+.course-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.course-content>navigator {
+  width: 340rpx;
+  margin-bottom: 40rpx;
+}
+
+.rm_img {
+  width: 100%;
+  height: 240rpx;
+  display: block;
+}
+
+.rm_name {
+  background-color: white;
+  padding: 20rpx;
+}
+
+.rm_d {
+  font-size: 28rpx;
+  color: #515151;
+}
+
+.rm_f {
+  height: 70rpx;
+  font-size: 24rpx;
+  color: #808080;
+  margin-top: 5rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.rm_box {
+  display: flex;
+  align-items: center;
+  padding-top: 20rpx;
+}
+
+.rm_x {
+  font-size: 24rpx;
+  color: #808080;
+}
+
+.rm_pay {
+  font-size: 20rpx;
+  color: white;
+  margin-left: auto;
+  text-align: center;
+  background: linear-gradient(to top, #1F6EFF, #7CB3FE);
+  padding: 0 20rpx;
+  border-radius: 20rpx;
+  line-height: 38rpx;
+  box-shadow: 0rpx 5rpx 10rpx #1F6EFF;
+}
+
+/*  */
+
+.none {
+  text-align: center;
+  padding: 20rpx 0 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share,
+.complaint {
+  background-color: white;
+  color: #808080;
+  font-size: 24rpx;
+  padding: 20rpx 40rpx;
+  display: flex;
+  align-items: center;
+  margin: 0 9%;
+  border-radius: 50rpx;
+}
+
+.share>image,
+.complaint>image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+/*  */
+.dip1 {
+  position: relative;
+  z-index: 999;
+}
+
+
+.dip2 {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.search_bag {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(250, 250, 250);
+  position: fixed;
+  left: 0;
+  z-index: 9;
+}
+
+.search_box {
+  height: 100%;
+  background-color: rgb(250, 250, 250);
+  padding: 2%;
+  font-size: 24rpx;
+  position: fixed;
+  top: 92.78rpx;
+  z-index: 99;
+  width: 96%;
+  padding-bottom: 100rpx;
+}
+
+.search_box>scroll-view {
+  height: 60%;
+  overflow: hidden;
+}
+
+.search_content {
+  padding: 2%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1rpx solid rgb(250, 250, 250);
+}
+
+.search_content_img {
+  height: 150rpx;
+  width: 150rpx;
+}
+
+.search-content_txt {
+  width: 80%;
+  margin-left: 20rpx;
+}
+
+.search_content text:nth-of-type(1) {
+  width: 100%;
+  display: block;
+}
+
+.search_content text:nth-of-type(2) {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.announcement {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  font-size: 27rpx;
+}
+
+.announcement image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 20rpx;
+}
+
+.announcement {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.swiper_anno {
+  height: 80rpx;
+  width: 80%;
+}
+
+.bag {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.bag_2 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bag_2 navigator {
+  margin-top: 40%;
+}
+
+.bag_img {
+  width: 600rpx;
+  height: 650rpx;
+}
+
+.bag_cancel {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 38.5%;
+  right: 24.5%;
+}
+
+.bag_2_1 {
+  position: relative;
+}

@@ -1,0 +1,47 @@
+<!--pages/datum/datum.wxml-->
+<view class="fraame">
+	<view class="fill">
+		<text>家长姓名</text>
+		<input placeholder="家长真实姓名" value="{{userName}}" bindinput="userName" />
+	</view>
+	<view class="fill">
+		<text decode="{{true}}">亲&ensp;&ensp;&ensp;&ensp;人</text>
+		<radio-group class="radio-group" bindchange="radioChange">
+			<block wx-if="{{items[0].index == gender}}">
+				<radio class="radio" value="{{items[0].index}}" checked="{{true}}">
+					<text>{{items[0].value}}</text>
+				</radio>
+			</block>
+			<block wx:else>
+				<radio class="radio" value="{{items[0].index}}" checked="{{false}}">
+					<text>{{items[0].value}}</text>
+				</radio>
+			</block>
+			<block wx-if="{{items[1].index == gender}}">
+				<radio class="radio" value="{{items[1].index}}" checked="{{true}}">
+					<text>{{items[1].value}}</text>
+				</radio>
+			</block>
+			<block wx:else>
+				<radio class="radio" value="{{items[1].index}}" checked="{{false}}">
+					<text>{{items[1].value}}</text>
+				</radio>
+			</block>
+		</radio-group>
+	</view>
+	<view class="fill">
+		<text decode="{{true}}">地&ensp;&ensp;&ensp;&ensp;址</text>
+		<input placeholder="地址" value="{{address}}" bindinput="address" />
+	</view>
+	<view class="fill">
+		<text decode="{{true}}">电&ensp;&ensp;&ensp;&ensp;话</text>
+		<input placeholder="电话" value="{{mobile}}" bindinput="mobile" />
+	</view>
+	<view class="fill">
+		<text>紧急电话</text>
+		<input placeholder="紧急电话" value="{{emergencycall}}" bindinput="emergencycall" />
+	</view>
+	<view class="fill">
+		<button size="100%" bindtap="updateUserInfo">保存</button>
+	</view>
+</view>

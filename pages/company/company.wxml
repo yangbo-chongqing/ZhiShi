@@ -1,0 +1,4 @@
+<!--pages/company/company.wxml-->
+<view>
+  <image  src="/images/gywm.jpg" mode="widthFix"></image>
+</view>

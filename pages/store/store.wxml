@@ -1,0 +1,151 @@
+<!-- 搜索123 张123-->
+<view class="{{sishow?'dip2':'dip1'}}">
+	<view class="search">
+		<view class="seek">
+			<image class="search_image" src="/images/search.png"></image>
+			<input class="search_input" placeholder="{{value}}" bindinput="getdata"></input>
+		</view>
+		<view class="location" bindtap='getLocation'>
+			<image class="location_image" src="/images/region.png"></image>
+			<text class="location_place">{{chooseAddress}}</text>
+		</view>
+	</view>
+</view>
+<!--  -->
+<view class="search_bag" wx:if="{{sishow}}"></view>
+<view class="search_box" wx:if="{{sishow}}">
+	<scroll-view scroll-y="true">
+		<block wx:for="{{goodlist}}" wx:key="index">
+			<navigator url="/pages/course/course?GoodID={{item.id}}">
+				<view class="search_content">
+					<image class="search_content_img" src="{{item.homePic}}"></image>
+					<view class="search-content_txt">
+						<text>{{item.goodName}}</text>
+						<text>{{item.goodIntro}}</text>
+					</view>
+				</view>
+			</navigator>
+		</block>
+	</scroll-view>
+</view>
+
+<!--广告banner-->
+<swiper style="height:155px;"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+	<block wx:for='{{banner}}'wx:key='index'>
+		<navigator url="{{item.url}}" hover-class="none">
+			<swiper-item>
+				<image style="width:100%;height:100%"  src="{{item.pic}}" class="slide-image" />
+			</swiper-item>
+		</navigator>
+	</block>
+</swiper>
+<!-- 公告 -->
+<view class="announcement" wx:if="{{announcement != ''}}">
+	<image src="../../images/announcement.png"></image>
+	<swiper class="swiper_anno" circular="true" autoplay="true" vertical="true" scroll-y="true" style="">
+		<swiper-item wx:for="{{announcement}}" wx:key="index">
+			<navigator url="{{item.url}}" hover-class="none">{{item.content}}</navigator>
+		</swiper-item>
+	</swiper>
+</view>
+<!-- 导航栏 -->
+<view class="desc">
+	<block wx:for='{{type}}' wx:key='item'>
+		<view class='desc_view'>
+			<navigator url="/pages/sign/sign?id={{item.id}}" hover-class="noshadow">
+				<image src="{{item.pic}}" />
+				<view>{{item.name}}</view>
+			</navigator>
+		</view>
+	</block>
+</view>
+<!--  -->
+<view class="zan-panel">
+	<view class="zan-cell">
+		<text>特惠抢购</text>
+		<view class="smallsize"></view>
+	</view>
+</view>
+<!-- 一元秒杀 -->
+<view class="container">
+	<navigator url="/pages/course/course?GoodID={{activity.id}}" hover-class="noshadow">
+		<!-- <navigator url="/pages/activity/300/activity300?GoodID={{activity.id}}" hover-class="noshadow"> -->
+		<view class="item-img">
+			<image src="{{activity.homePic}}"></image>
+		</view>
+		<view class="item-t">
+			<view class="t-d">{{activity.goodName}}</view>
+			<view class="t-f">{{activity.goodIntro}}</view>
+			<view class="t-box">
+				<view class="t-wrap">
+					<text class="t-big">¥ {{activity.goodPrice}}</text>
+					<text class="t-samll">¥3000</text>
+					<text class="t-r" style="margin-left: 20rpx;font-size: 24rpx;color: #515151;">{{activity.buyNum}}人在学</text>
+				</view>
+				<view class="btn_pay">立即抢购</view>
+			</view>
+		</view>
+	</navigator>
+</view>
+<view class="zan-panel" wx:if="{{activitycouse.length > 0}}">
+	<view class="zan-cell">
+		<text>限时抢购</text>
+		<view class="smallsize"></view>
+	</view>
+</view>
+<view class="course-list" wx:if="{{activitycouse.length > 0}}">
+	<view class="course-content">
+		<block wx:for='{{activitycouse}}' wx:key='item'>
+			<navigator url="/pages/course/course?GoodID={{item.id}}" hover-class="noshadow">
+				<view>
+					<image class="rm_img" src="{{item.homePic}}"></image>
+				</view>
+				<view class="rm_name">
+					<view class="rm_d">{{item.goodName}}</view>
+					<!-- <view class="rm_f">{{item.goodIntro}}</view> -->
+					<view class="rm_box">
+						<view class="rm_x">{{item.buyNum}}人在学</view>
+						<view class="rm_pay">我要报名</view>
+					</view>
+				</view>
+			</navigator>
+		</block>
+	</view>
+</view>
+<!--  -->
+<view class="zan-panel">
+	<view class="zan-cell">
+		<text>猜你喜欢</text>
+		<view class="smallsize"></view>
+	</view>
+</view>
+<!-- 猜你喜欢 -->
+<view class="course-list">
+	<view class="course-content">
+		<block wx:for='{{favorite}}' wx:key='item'>
+			<navigator url="/pages/course/course?GoodID={{item.id}}" hover-class="noshadow">
+				<view>
+					<image class="rm_img" src="{{item.homePic}}"></image>
+				</view>
+				<view class="rm_name">
+					<view class="rm_d">{{item.goodName}}</view>
+					<!-- <view class="rm_f">{{item.goodIntro}}</view> -->
+					<view class="rm_box">
+						<view class="rm_x">{{item.buyNum}}人在学</view>
+						<view class="rm_pay">我要报名</view>
+					</view>
+				</view>
+			</navigator>
+		</block>
+	</view>
+</view>
+<!--  -->
+<view class="bag" wx:if="{{showModal}}"></view>
+<view class="bag_2" wx:if="{{showModal}}">
+	<view class="bag_2_1">
+		<navigator url="{{tk[0].url}}" style="hover-class:none;">
+			<image class="bag_img" src="{{tk[0].pic}}"></image>
+		</navigator>
+		<image class="bag_cancel" src="/images/cancel.png" bindtap="ok" wx:if="{{ok}}"></image>
+	</view>
+</view>

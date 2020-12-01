@@ -1,0 +1,49 @@
+<view>
+	<view class="generalize">
+		<image class="generalize_img" src="/images/name.png"></image>
+		<input class="generalize_txt" placeholder="输入真实姓名" placeholder-class="pl" bindinput="name">{{name}}</input>
+	</view>
+	<view class="generalize">
+		<image class="generalize_img" src="/images/tuiguang-shenfenzheng@2x.png"></image>
+		<input class="generalize_txt" placeholder="身份信息" placeholder-class="pl" bindinput="idcard">{{idcard}}</input>
+	</view>
+	<view class="generalize">
+		<image class="generalize_img" src="/images/site.png"></image>
+		<input class="generalize_txt" placeholder="输入地址" placeholder-class="pl" bindinput="address">{{address}}</input>
+	</view>
+	<view class="generalize">
+		<image class="generalize_img" src="/images/phone.png"></image>
+		<input class="generalize_txt" placeholder="输入联系电话号码" placeholder-class="pl" bindinput="phone">{{phone}}</input>
+	</view>
+	<picker bindchange="bindPickerChange" value="{{index}}" range-key="name" range="{{array}}">
+			<view class="generalize">
+				<image class="generalize_img" src="/images/work.png"></image>
+					<text class="generalize_txt" >选择属性:{{array[index].name}}</text>
+				<image class="generalize_arrows" src="/images/arrows.png"></image>
+			</view>
+	</picker>
+	<view class="generalize cause">
+		<view class="bor">
+			<image class="generalize_img" src="/images/cause.png"></image>
+			<text class="generalize_txt">选择原因</text>
+		</view>
+	</view>
+	<view class="radio">
+		<radio-group bindchange="radioChange">
+			<radio value="0">打发时间</radio>
+			<radio value="1">增加收入</radio>
+			<radio value="2">其他原因</radio>
+		</radio-group>
+	</view>
+	<view class="explain">
+		<view>兼职说明</view>
+		<view>1、注册兼职人员需提前提交个人资料到平台备案</view>
+		<view>2、成功注册，推广人员直接通过二维码或小程序分享成功</view>
+		<view>3、推广人员的提成可以直接在小程序进行体现，关注</view>
+		<view>4、以直接在小程序进行体现，关注直接通过二维码或小</view>
+	</view>
+	<view class="apply">
+		<view bindtap="onNo">取消</view>
+		<view bindtap="onPromote">申请</view>
+	</view>
+</view>

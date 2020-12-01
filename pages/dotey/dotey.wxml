@@ -1,0 +1,37 @@
+<view>
+	<view class="case" wx:for="{{childInfo}}"  wx:key="item">
+		<view class="case_bor">
+			<view class="case_t">
+				<view></view>
+				<text>当前宝贝</text>
+				<!-- <text>编辑</text> -->
+				<text bindtap="delete"  data-id="{{item.childID}}">删除</text>
+			</view>
+			<navigator hover-class="onshadow" url="/pages/redact/redact?childID={{item.childID}}&headimg={{item.headimg}}&name={{item.name}}&school={{item.school}}&idcard={{item.idcard}}&phase={{item.phase}}">
+				<view class="case_message">
+					<image src="{{item.headimg}}"></image>
+					<view class="message_t">
+						<view>{{item.name}}</view>
+						<view>宝贝生日: {{item.dirthday || '*******' }}</view>
+						<view>身份信息: {{item.idcard || '***************'}}</view>
+					</view>
+				</view>
+			</navigator>
+		</view>
+	</view>
+	<!--  -->
+	<view wx:if="{{childInfo == null}}" class="hint">
+		<image class="hint_img" src="/images/tim_img.png"></image>
+		<text class="hint_txt">哎呀，没有内容</text>
+	</view>
+	<!--  -->
+	<navigator url="/pages/redact/redact" hover-class="noshadow">
+		<view class="addition">
+			<view class="addition_message">
+				<image src="/images/addition.png"></image>
+				<view>新增孩子信息</view>
+			</view>
+			<image class="addition_arrows" src="/images/arrows.png"></image>
+		</view>
+	</navigator>
+</view>

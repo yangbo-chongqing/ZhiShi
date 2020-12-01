@@ -1,0 +1,93 @@
+/*  */
+.course-content {
+  background-color: white;
+  padding-bottom: 30rpx;
+}
+
+.item-img>image {
+  height: 400rpx;
+}
+
+.item-t {
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  border-bottom: 1rpx solid #CCCCCC;
+}
+
+.t-f {
+  line-height: 50rpx;
+}
+
+.t-samll {
+  margin-left: 30rpx;
+  color: black;
+}
+
+/*  */
+.desc {
+  background-color: white;
+  padding: 30rpx;
+}
+
+.desc>image {
+  width: 100%;
+  height: 480rpx;
+}
+
+/*  */
+.Bill {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.takeBill {
+  height: 88rpx;
+  background: #fff;
+  position: relative;
+  border-top: 2rpx solid #E6E6E6;
+  overflow: hidden;
+}
+
+.icon-wrap {
+  float: left;
+}
+
+.kefu_d {
+  display: flex;
+  align-items: center;
+  margin: 0rpx;
+  background-color: white;
+  margin-left: auto;
+  height: 90rpx;
+}
+
+.kefu_d::after {
+  border: 0rpx;
+}
+
+.kefu_d>image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.kefu_d>view {
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  color: #515151;
+}
+
+.takeBill .box-right {
+  width: 254rpx;
+  height: 90rpx;
+  background: rgb(66, 172, 255);
+  position: absolute;
+  right: 0;
+  color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+/*  */

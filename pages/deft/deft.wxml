@@ -1,0 +1,110 @@
+<view class='container'>
+	<!--Tab布局-->
+	<view class='title'>
+		<text bindtap='clickTab' class="{{currentTab==0 ? 'active' : ''}}" data-current='0'>未使用</text>
+		<text bindtap='clickTab' class="{{currentTab==1 ? 'active' : ''}}" data-current='1'>已使用</text>
+		<text bindtap='clickTab' class="{{currentTab==2 ? 'active' : ''}}" data-current='2'>已失效</text>
+	</view>
+
+	<!--内容布局-->
+	<swiper class='swiper' bindchange='swiperTab' current='{{currentTab}}'>
+		<swiper-item class='swiper'>
+			<scroll-view scroll-y='true' style="height: 100%;">
+				<block wx:for="{{coupon}}" wx:key="item" wx:if="{{item.Status == 0}}">
+					<view class="bag">
+						<view class="header">
+							<view class="hh_content">
+								<view class="hh_left">
+									<view class="hh_left_content">
+										<view wx:if="{{item.CouponID == 3}}">{{item.Preferentialprice}}%优惠券</view>
+										<view wx:else>{{item.Preferentialprice}}优惠券</view>
+										<view>{{item.Explains}}</view>
+									</view>
+								</view>
+								<view class="hh_right">
+									<view class="hh_right_content">
+										<view>现有
+											<text>1</text>张</view>
+										<view class="hh_addnews">下单使用</view>
+										<view>有效期：{{item.HeavenNumber}}天</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</block>
+
+				<view hidden="{{promptOne != true}}" class="no">
+					<image mode="aspectFit" class="no_img" src="/images/01e2a3579706570000012e7eb502ab.jpg@1280w_1l_2o_100sh.png"></image>
+					<view class="no_txt">哎呀，没有优惠券了</view>
+				</view>
+			</scroll-view>
+
+		</swiper-item>
+		<swiper-item class='swiper'>
+			<view hidden="{{promptTwo != true}}" class="no">
+				<image mode="aspectFit" class="no_img" src="/images/01e2a3579706570000012e7eb502ab.jpg@1280w_1l_2o_100sh.png"></image>
+				<view class="no_txt">哎呀，没有优惠券了</view>
+			</view>
+			<scroll-view scroll-y='true' style="height: 100%;">
+				<block wx:for="{{coupon}}" wx:key="item" wx:if="{{item.Status == 1}}">
+					<view class="bag">
+						<view class="header">
+							<view class="hh_content">
+								<view class="hh_left">
+									<view class="hh_left_content">
+										<view wx:if="{{item.CouponID == 3}}">{{item.Preferentialprice}}%优惠券</view>
+										<view wx:else>{{item.Preferentialprice}}优惠券</view>
+										<view>{{item.Explains}}</view>
+									</view>
+								</view>
+								<view class="hh_right">
+									<view class="hh_right_content">
+										<view>现有
+											<text>1</text>张</view>
+										<view class="hh_addnews">已使用</view>
+										<view wx:if="{{item.HeavenNumber}} != ''">有效期：{{item.HeavenNumber}}天</view>
+										<view wx:else>有效期：{{item.EndTime}}</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</block>
+			</scroll-view>
+		</swiper-item>
+		<swiper-item class='swiper'>
+			<scroll-view scroll-y='true' style="height: 100%;">
+				<block wx:for="{{coupon}}" wx:key="item" wx:if="{{item.Status == 2}}">
+					<view class="bag">
+						<view class="header">
+							<view class="hh_content">
+								<view class="hh_left">
+									<view class="hh_left_content">
+										<view wx:if="{{item.term == 1}}">{{item.preferentialprice * 100}}%优惠券</view>
+										<view wx:else>{{item.preferentialprice}}优惠券</view>
+
+										<view>{{item.Explains}}</view>
+									</view>
+								</view>
+								<view class="hh_right">
+									<view class="hh_right_content">
+										<view>现有
+											<text>1</text>张</view>
+										<view class="hh_addnews">已失效</view>
+										<view>有效期：{{item.HeavenNumber}}天</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</block>
+				<view hidden="{{promptThree != true}}" class="no">
+					<image mode="aspectFit" class="no_img" src="/images/01e2a3579706570000012e7eb502ab.jpg@1280w_1l_2o_100sh.png"></image>
+					<view class="no_txt">哎呀，没有优惠券了</view>
+				</view>
+			</scroll-view>
+
+		</swiper-item>
+	</swiper>
+</view>

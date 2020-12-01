@@ -1,0 +1,2 @@
+<!--pages/activity/300/activity300.wxml-->
+<view bindtap="sign">报名</view>

@@ -1,0 +1,92 @@
+<view class="coupon" hidden="{{couponHide}}">
+	<view class="cou" wx:for="{{coupon}}" wx:for-index="index" wx:key="index">
+		<image></image>
+		<view class="cou_1" >
+			<view class="cou_2" wx:if="{{item.term != 1}}">
+				<view>优惠券</view>
+				<view>满<text style="font-size:70rpx"> {{item.ThreShold || '0'}} </text> 减<text style="font-size:70rpx"> {{item.preferentialprice}} </text> </view>
+			</view>
+				<view class="cou_2" wx:else>
+				<view>优惠券</view>
+				<view>{{item.explains}} <text style="font-size:70rpx">{{item.preferentialprice * 100}}%</text> </view>
+			</view>
+			<view class="cou_3">
+				<view bindtap="{{item.selected ? 'reduceCoupon' : 'changeCoupon'}}" data-index="{{index}}">{{item.selected ? '取消选择' : '点击使用'}}</view>
+				<view>有效期：30天</view>
+			</view>
+		</view>
+		<view class="bottom">
+			<view>已抵扣：<text style="color:red">￥{{couponNum}}</text></view>
+			<view bindtap="changecoupon">确认</view>
+		</view>
+	</view>
+	<view></view>
+</view>
+
+<view class="head">
+	<image src="{{homePic}}"></image>
+	<view class="head_1">
+		<view>{{goodname}}</view>
+		<!-- <view>{{intro}}{{course}}</view> -->
+		 <view>{{course}}</view>
+	</view>
+	<view class="head_2">￥{{price}}/人</view>
+</view>
+
+<view class="center">
+	<view class="center_item title">
+		<view class="title_1">孩子信息</view>
+		<!-- <view class="title_2">
+			<view class="title_txt" >{{child.length < 0 || '修改资料'}}</view>
+			<image class="title_mark" src="/images/jiantou_1.png"></image>
+		</view> -->
+	</view>
+	<view class="center_item center_item_1">
+		<view class="essential">
+			<view>姓名：</view>
+			<view>{{child[childindex].name}}</view>
+		</view>
+		<view class="essential">
+			<view>联系方式：</view>
+			<view>{{phone}}</view>
+		</view>
+		<view class="essential">
+			<view>身份证号：</view>
+			<view>{{child[childindex].idcard ==true || '************'}}</view>
+		</view>
+		<view class="essential">
+			<view>就读学校：</view>
+			<view>{{child[childindex].school}}</view>
+		</view>
+		<view class="essential">
+			<view>学习阶段：</view>
+			<view>{{child[childindex].phase}}</view>
+		</view>
+	</view>
+
+	<view class="center_item" style="position:relative;">
+		<view>选择孩子</view>
+		<view style="position:absolute;width: 180rpx;height:80rpx;right:0rpx;color:rgb(114, 114, 114);line-height: 80rpx;" wx:if="{{child == ''}}" bindtap="{{child == '' ? 'zhuanfa':''}}">点击添加宝贝</view>
+		<picker wx:if="{{child != ''}}" bindchange="bindPickerChangeChild" value="{{childindex}}" range="{{child}}" range-key="name">
+			<input disabled="true" style="width:170rpx" value="{{child[childindex].name}}" placeholder="{{child == '' ? '点击添加宝贝':'选择宝贝'}}"></input>
+		</picker>
+	</view>
+
+	<!-- <view class="center_item">
+		<view>确认课程</view>
+		<view>{{course}}</view>
+	</view> -->
+
+	<view class="center_item">
+		<view style="color:#363636;">优惠券</view>
+		<view class="title_2">
+			<input disabled="true" bindtap="changecoupon" style="width:200rpx;color:#535252" placeholder="{{coupon == '' ? '暂无可用优惠券':'未选择优惠券'}}" value="{{couponNum == 0 ? '' : '已抵扣 ￥'}}{{couponNum == 0 ? '' : couponNum}}"></input>
+			<image class="title_mark" src="/images/jiantou_2.png"></image>
+		</view>
+	</view>
+</view>
+
+<view class="bottom">
+	<view>合计：<text style="color:red">￥{{money}}</text></view>
+	<view bindtap="signUp">确认报名</view>
+</view>

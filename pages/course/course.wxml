@@ -1,0 +1,232 @@
+<view style="margin-bottom:90rpx">
+	<view class="course-content">
+		<view class="item-img">
+			<image src="{{item.pic}}" wx:for="{{pic}}" wx:if="{{item.type == 2}}" wx:key="index"></image>
+		</view>
+		<view class="item-t">
+			<view class="t-d">{{GoodInfo.goodName}}</view>
+			<view class="t-box">
+				<view class="t-wrap">
+					<text class="t-big">¥ {{GoodInfo.goodPrice}}</text>
+				</view>
+				<button hover-class="none" class='kefu_d' open-type="share">
+					<!-- <image src="/images/pingl.png"></image> -->
+					<image src="/images/8f3290f0268dc9f5941dc42a18d9a0d.png"></image>
+					<view>分享</view>
+				</button>
+			</view>
+		</view>
+	</view>
+
+	<!-- 抢购 -->
+	<view class="discounts" wx:if="{{GoodInfo.id != 1 && ex != null}}">
+		<text>{{ex.intro}}</text>
+		<image class="btn_img1" src="/images/5881c3351403f7cb6765fe3565b3b78.png"></image>
+		<!-- <view class="btn_pay" bindtap="changechildHide">立即订购</view> -->
+		<image class="btn_image" bindtap="changechildHide" src="/images/6ea2ce05f45448f6ad1f1114a701286.png"></image>
+	</view>
+	<view class="discounts_bog" bindtap="changechildHide" hidden="{{childHide}}"></view>
+	<view class="discounts_choose" hidden="{{childHide}}">
+		<view class="choose">
+			<view class="choice_t">
+				<picker bindchange="bindPickerChange2" value="{{childindex2}}" range-key="name" range="{{child}}">
+					<view class="picker">
+						选择孩子：{{child[childindex2].name}}
+					</view>
+				</picker>
+				<image src="/images/arrows.png"></image>
+			</view>
+			<view class="choice_t">
+				<picker class='time-picker' style="width:100%;height:100%" mode="multiSelector" bindtap='pickerTap' bindchange="bindStartMultiPickerChange2" bindcolumnchange="bindMultiPickerColumnChange2" value="{{multiIndex2}}" range="{{multiArray2}}">
+					<view class="picker">
+						选择上课时间: {{appointment}}
+					</view>
+				</picker>
+				<image src="/images/arrows.png"></image>
+			</view>
+			<view class="choice_b">
+				<view class="" bindtap="changechildHide">取消</view>
+				<view class="" bindtap="signUpEx">确定</view>
+			</view>
+		</view>
+	</view>
+	<!-- 活动 -->
+	<view class="activity" wx:if="{{isActivityCourse == 1}}">
+		<view class="acti_top">
+			<view class="acti_ation">
+				<view class="acti_bo">
+					<view class="acti_1">{{money}}元</view>
+					<view class="acti_2">剩余金额</view>
+				</view>
+				<view class="acti_bo">
+					<view class="acti_1">{{count_r}}人</view>
+					<view class="acti_2">邀请人数</view>
+				</view>
+				<view class="acti_bo">
+					<view class="acti_1" style="color:red;">{{timer}}</view>
+					<view class="acti_2">剩余时间</view>
+				</view>
+			</view>
+			<view class="acti_butt" >
+				<button class="butt_1" bindtap="{{GoodID == 1 ? 'activesign' : 'placeOrder'}}" data-name="order">立即报名</button>
+	    		<button hidden="{{activitytime != 0}}" class="butt_2 butt"  bindtap="startactivity">开始活动</button>
+	      	<button class="butt_2"  hover-class="none" open-type="share">分享</button>
+			</view>
+		</view>
+		<view class="acti_bot">
+			<view class="tabNav">
+				<view wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'cur' : ''}}"><text>{{item}}</text></view>
+			</view>
+			<view id="tab1" class="{{tab1}}">
+				<view>
+					<image style="width:100%" src="/images/8f6cc9f88f691d3a1f896516de76dff.png" mode="widthFix"></image>
+				</view>
+			</view>
+			<view id="tab2" class="{{tab2}}">
+				<view class="tab_" wx:for="{{user}}" wx:key="item" >
+					<image class="tab_img" src="{{item.Avatar}}"></image>
+					<view class="tab_txt_1">{{item.NickName}}</view>
+					<view class="tab_txt_2">+{{item.Money}}元</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 机构定位 -->
+	<view class="coordinate" wx:if="{{mec != ''}}">
+		<view class="label">位置：</view>
+		<picker bindchange="bindCasPickerChange" range="{{mec}}" range-key="addRess">
+			<view class="map_text">
+				<input class="map_inp" name="other" disabled="true" placeholder="位置" type="text" value="{{mec[casIndex].addRess}}" />
+				<image class="map_cho" src="/images/choose.png"></image>
+			</view>
+		</picker>
+	</view>
+
+	<!-- 地图 -->
+	<map wx:if="{{mec != ''}}" enable-zoom="{{false}}" enable-scroll="{{false}}" longitude="{{marks[0].longitude}}" latitude="{{marks[0].latitude}}" scale="15" show-compass="true" markers="{{marks}}"></map>
+
+	<!-- 课程图片 -->
+	<view class="zan-panel" wx:if="{{previewImg != ''}}">
+		<view class="zan-cell">
+			<text>课程图片</text>
+			<view class="smallsize"></view>
+		</view>
+	</view>
+
+	<!-- 课程图片 -->
+	<view class="desc" wx:if="{{previewImg != ''}}">
+		<swiper autoplay="true" interval="3000" circular="true" previous-margin="20rpx" next-margin="20rpx" display-multiple-items="3">
+			<swiper-item style="width:40%;height:100%" wx:for="{{previewImg}}" wx:key="index">
+				<image bindtap="previewImg" data-pic="{{item}}" style="width:100%;height:100%" src="{{item}}"></image>
+			</swiper-item>
+		</swiper>
+		<view>
+		</view>
+	</view>
+
+	<!-- 课程简介 -->
+	<view class="zan-panel">
+		<view class="zan-cell">
+			<text>课程简介</text>
+			<view class="smallsize"></view>
+		</view>
+	</view>
+	<view class="intro">
+		<view>{{GoodInfo.goodIntro}}</view>
+	</view>
+
+	<!-- 课程详情 -->
+	<view class="particulars_bagimg" wx:if="{{GoodInfoContent.length>0}}">
+		<view class="parti_title_1">{{GoodInfo.goodName}}</view>
+		<view class="parti_title_2">课程详情介绍</view>
+		<view class="parti_txt">
+			<view class="parti_bor">
+				<view class="parti_bor">
+					<view class="parti_bor" style="padding-left:20rpx">
+						<block wx:for="{{GoodInfoContent}}" wx:key="index">
+							<view class="parti_title_3">
+								<view></view>
+								<view>{{item.goodTitle}}</view>
+							</view>
+							<view class="parti_title_4">
+								<view>{{item.goodContent}}</view>
+							</view>
+						</block>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 课程详情 -->
+	<view class="zan-panel">
+		<view class="zan-cell">
+			<text>{{GoodID=='1' ? '活动详情' : '课程详情'}}</text>
+			<view class="smallsize"></view>
+		</view>
+	</view>
+
+	<!-- 课程详情图 -->
+	<view class="desc">
+		<image src="{{item.pic}}" wx:for="{{pic}}" wx:if="{{item.type == 3}}" wx:key="index" mode="widthFix"></image>
+	</view>
+
+	<!--  -->
+	<view class="Bill">
+		<view class="takeBill">
+			<view class="icon-wrap">
+			</view>
+			<view wx:if="{{GoodID != 1}}" class="box-right" style="left: 0;" bindtap="collect">
+				<image src="{{collection?'/images/dbac03c4cd4583ddc7063227ab073ec.png':'/images/dd653b2bc458157d7e4fb956ba537b0.png'}}"></image> {{collection ? '已收藏' : '点击收藏'}}
+			</view>
+			<view class="box-right box-right2" bindtap="{{GoodID == 1 ? 'activesign' : 'placeOrder'}}" data-name="order">
+				立即报名</view>
+		</view>
+	</view>
+	<view class="shade" wx:if="{{show}}" bindtap="placeOrder"></view>
+	<view class="apply" wx:if="{{show}}">
+		<view class="apply_t">
+			<view class="apply_hea">
+				<image src="{{pic[0].pic}}"></image>
+				<view class="apply_hea_txt">
+					<view class="hea_title">{{GoodInfo.goodName}}</view>
+					<view wx:if="{{sku2 != null }}" class="hea_text">已选“{{name1}}、{{name2}}、{{name3}}”</view>
+					<view wx:if="{{sku2  == null }}" class="hea_text">已选“{{name1}}、{{name2}}”</view>
+				</view>
+				<view class="mon" wx:if="{{money == 0}}">￥ {{price}}/人</view>
+					<view class="mon" wx:else>￥ {{money}}/人</view>
+			</view>
+
+			<!-- 兴趣班 -->
+			<block wx:if="{{sku2 != null}}">
+				<view style="margin-top:30rpx;">选择班级</view>
+				<view class="sku_1">
+					<view wx:for="{{sku}}" data-id="{{index}}" bindtap="changesku" wx:key="index" wx:for-index="index" class="{{index ==  skuID1 ? 'selected' : ''}} sku" data-name="{{item.skuClass}}">{{item.skuClass}}</view>
+				</view>
+				<view>选择课时</view>
+				<view class="sku_1">
+					<view wx:for="{{sku1}}" data-id="{{index}}" bindtap="changesku1" wx:key="index" wx:for-index="index" class="{{index ==  skuID2 ? 'selected' : ''}} sku" data-name="{{item.skulesson}}">{{item.skulesson}}</view>
+				</view>
+				<view>选择级别</view>
+				<view class="sku_1">
+					<view wx:for="{{sku2}}" data-id="{{index}}" bindtap="changesku2" wx:key="index" wx:for-index="index" class="{{index ==  skuID3 ? 'selected' : ''}} sku" data-name="{{item.skuGrede}}">{{item.skuGrede}}</view>
+				</view>
+			</block>
+
+			<!-- 夏令营 -->
+			<block wx:if="{{sku2 == null}}">
+				<view class="sku_1">
+					<view wx:for="{{sku}}" data-id="{{index}}" bindtap="changesku" wx:key="index" wx:for-index="index" class="{{index ==  skuID1 ? 'selected' : ''}} sku" data-name="{{item.skuActivityDay}}">{{item.skuActivityDay}}</view>
+				</view>
+				<view class="sku_1">
+					<view wx:for="{{sku1}}" data-id="{{index}}" bindtap="changesku1" wx:key="index" wx:for-index="index" class="{{index ==  skuID2 ? 'selected' : ''}} sku" data-name="{{item.skuActivityTime}}">{{item.skuActivityTime}}</view>
+				</view>
+			</block>
+		</view>
+
+		<!--  -->
+		<view class="apply_b">
+			<view bindtap="placeOrder">取消</view>
+			<view bindtap="signUp">报名</view>
+		</view>
+	</view>
+</view>

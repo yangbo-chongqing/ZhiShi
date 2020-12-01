@@ -1,0 +1,109 @@
+page {
+  background-color: rgb(250, 250, 250);
+}
+
+text {
+  line-height: 1.6rem;
+}
+
+.noshadow {
+  hover-class: none;
+}
+
+/*  */
+.zan-panel {
+  padding: 20rpx 30rpx;
+}
+
+.zan-cell {
+  font-size: 28rpx;
+  padding-left: 15rpx;
+  border-left: 6rpx solid #41acff;
+  display: flex;
+  align-items: center;
+  color: #515151;
+}
+
+.zan-cell>text {
+  line-height: 1.2rem;
+}
+
+/* 详情 */
+.item-img>image {
+  width: 100%;
+  height: 299.734rpx;
+  display: block;
+}
+
+.item-t {
+  padding: 20rpx 20rpx 0 20rpx;
+  background-color: white;
+  line-height: 1.6rem;
+}
+
+.t-d {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #515151;
+}
+
+.t-f {
+  font-size: 24rpx;
+  color: #808080;
+}
+
+.t-box {
+  padding: 10rpx 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.t-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.t-big {
+  color: #E71B18;
+  font-size: 36rpx;
+}
+
+.t-samll {
+  display: inline-block;
+  font-size: 24rpx;
+  text-decoration: line-through;
+  margin-left: 30rpx;
+  color: #A7A7A7;
+}
+
+.btn_pay {
+  background-color: #42ADFF;
+  border-radius: 10rpx;
+  line-height: 50rpx;
+  text-align: center;
+  width: 166rpx;
+  font-size: 24rpx;
+  color: white;
+  margin-left: auto;
+}
+
+/* 提示 */
+.hint {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+}
+
+.hint_img {
+  width: 250rpx;
+  height: 300rpx;
+}
+
+.hint_txt {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
